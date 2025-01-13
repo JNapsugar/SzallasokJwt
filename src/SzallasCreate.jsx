@@ -23,7 +23,7 @@ export const SzallasCreate = () => {
                             hostname: formData.get('hostname'),
                             location: formData.get('location'),
                             price: formData.get('price'),
-                            minimum_nights: formData.get('minimum_nights'),
+                            minimum_nights: formData.get('minimum_nights') + ' éjszaka',
                         };
                         const token = localStorage.getItem('jwt');
                         if (!token) {

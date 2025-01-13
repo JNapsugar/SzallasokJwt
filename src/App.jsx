@@ -10,20 +10,14 @@ import {SzallasCreate} from "./SzallasCreate";
 import { SzallasMod } from './SzallasMod';
 import { SzallasDel } from './SzallasDel';
 
-
-
 export const App = () => {
   return (
     <Router>
       <nav className='navbar navbar-expand-sm navbar-dark bg-dark' style={{ position: 'fixed', top: 0, left: 0, width: '100%', zIndex: 1 }}>
         <div className='container-fluid'>
           <div className='navbar-brand'>SzallasJWT</div>
-          <button className='navbar-toggler' type='button'
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation">
-            <span className='collaőe navbar-collapse' id='navbarNav'></span>
+          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
           </button>
           <div className='collapse navbar-collapse' id='navbarNav'>
             <ul className='navbar-nav'>
@@ -43,8 +37,6 @@ export const App = () => {
                 <NavLink to={"/Logout"} className={({isActive}) => "nav-link" + (isActive? "active" : "")}>
                 Kijelentkezés</NavLink>
               </li>
-
-
             </ul>
           </div>
         </div>
@@ -58,9 +50,7 @@ export const App = () => {
         <Route path='/Del-szallas/:szallasId' element={<SzallasDel/>} />
         <Route path='/Logout' element={<Logout />} />
         <Route path='*' element={<Login />} />
-
       </Routes>
     </Router>
-
   );
 }
